@@ -2,6 +2,18 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("./Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("./Lato/Lato-Bold.ttf");
 }
 
 body {
@@ -9,10 +21,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-weight: 800;
   text-align: center;
-  text-transform: uppercase;
   color: #fff;
   padding: 20px;
   overflow-x: hidden;
@@ -22,8 +33,8 @@ body {
 .card {
   padding: 25px;
   border-radius: 20px;
-  border: 3px solid #5b2361;
-  background-color: #c066ff;
+  border: 3px solid #11b3cc;
+  background-color: #16d2ee;
 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -43,13 +54,6 @@ h1,
 h2,
 p {
   line-height: 1;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #341238;
-}
-
-h1 span,
-h2 span {
-  -webkit-text-stroke-width: 0;
 }
 
 h1 {
