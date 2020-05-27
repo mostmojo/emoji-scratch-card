@@ -130,9 +130,9 @@ p {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -100px;
+  top: -300px;
   left: 50%;
-  width: 500px;
+  width: 420px;
   height: 150px;
   font-weight: 600;
   border-radius: 25px;
@@ -191,5 +191,29 @@ p {
     opacity: 0;
     bottom: 15px;
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .emoji-btn {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .card {
+    padding: 0;
+  }
+
+  .uncovered span {
+    transform: scale(0.8);
+  }
+
+  .dialog-box {
+    width: 300px;
+    height: 65%;
   }
 }
