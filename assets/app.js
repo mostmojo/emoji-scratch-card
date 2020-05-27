@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
         message = "Congratulations!";
       } else {
         emojis.push("⌚");
-        message = "Thanks for playing.";
+        message = "Congratulations..";
       }
 
       outputEmojis(shuffleArray(emojis));
@@ -86,6 +86,7 @@ window.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => rainMoney(), 1200);
           } else {
             loseSound.play();
+            setTimeout(() => rainMoney(), 1200);
           }
         }, 1500);
 
