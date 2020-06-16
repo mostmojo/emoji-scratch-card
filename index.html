@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <title>Emoji Scratch Card</title>
-  </head>
-  <body>
-    <div class="card">
-      <div class="instructions">
-        <h1>
-          Match 3
-          <span>💎</span>
-          to win!
-        </h1>
-        <h2>
-          Click the
-          <span>💰</span>
-          to reveal
-        </h2>
-        <p>Reveal all 9 boxes to check results!</p>
-      </div>
 
-      <div class="emoji-container">
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-        <button class="emoji-btn"><span class="emoji-output"></span></button>
-      </div>
-    </div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./assets/style.css" />
+	<title>Emoji Scratch Card</title>
+</head>
 
-    <div class="dialog-box">
-      <h2 class="dialog-message"></h2>
-    </div>
+<body>
+	<div class="card">
+		<div class="instructions">
+			<h1>
+				Match 3
+				<span>💎</span>
+				to win!
+			</h1>
+			<h2>
+				Click the
+				<span>💰</span>
+				to reveal
+			</h2>
+			<p>Reveal all 9 boxes to check results!</p>
+		</div>
 
-    <audio src="https://www.freesfx.co.uk/rx2/mp3s/4/16298_1460570779.mp3" class="bell-sound-1"></audio>
-    <audio src="https://www.freesfx.co.uk/rx2/mp3s/4/16297_1460570779.mp3" class="bell-sound-2"></audio>
-    <audio src="https://www.freesfx.co.uk/rx2/mp3s/4/16296_1460570779.mp3" class="bell-sound-3"></audio>
-    <audio src="https://www.freesfx.co.uk/rx2/mp3s/4/16290_1460570777.mp3" class="win-sound"></audio>
-    <audio src="https://www.freesfx.co.uk/rx2/mp3s/4/16293_1460570778.mp3" class="lose-sound"></audio>
+		<div class="emoji-container">
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+			<button class="emoji-btn"><span class="emoji-output"></span></button>
+		</div>
+	</div>
 
-    <script src="./assets/app.js"></script>
-  </body>
+	<div class="dialog-box">
+		<h2 class="dialog-message"></h2>
+	</div>
+
+	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296278/little_robot_sound_factory_Jingle_Win_Synth_00.mp3" class="bell-sound-1"></audio>
+	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296508/zapsplat_multimedia_game_sound_advance_award_nylon_plucked_synth_002_40807.mp3"
+		class="bell-sound-2"></audio>
+	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296622/little_robot_sound_factory_Jingle_Win_Synth_03.mp3" class="bell-sound-3"></audio>
+	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296833/human_crowd_approx_150_people_cheer_indoors.mp3" class="win-sound"></audio>
+	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296833/human_crowd_approx_150_people_cheer_indoors.mp3" class="lose-sound"></audio>
+
+	<script src="./assets/app.js"></script>
+</body>
+
 </html>
