@@ -1,102 +1,112 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const emojiContainer = document.querySelector(".emoji-container"),
-    emojiOutput = document.querySelectorAll(".emoji-output"),
-    dialogBox = document.querySelector(".dialog-box"),
-    dialogMessage = document.querySelector(".dialog-message"),
-    bellSound1 = document.querySelector(".bell-sound-1"),
-    bellSound2 = document.querySelector(".bell-sound-2"),
-    bellSound3 = document.querySelector(".bell-sound-3"),
-    winSound = document.querySelector(".win-sound"),
-    loseSound = document.querySelector(".lose-sound"),
-    winner = Math.floor(Math.random() * 2),
-    outputEmojis = (a) => emojiOutput.forEach((emoji, i) => (emoji.textContent = a[i])),
-    shuffleArray = (a) => {
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
+	const emojiContainer = document.querySelector(".emoji-container"),
+		emojiOutput = document.querySelectorAll(".emoji-output"),
+		dialogBox = document.querySelector(".dialog-box"),
+		dialogMessage = document.querySelector(".dialog-message"),
+		bellSound1 = document.querySelector(".bell-sound-1"),
+		bellSound2 = document.querySelector(".bell-sound-2"),
+		bellSound3 = document.querySelector(".bell-sound-3"),
+		winSound = document.querySelector(".win-sound"),
+		loseSound = document.querySelector(".lose-sound"),
+		winner = Math.floor(Math.random() * 2),
+		outputEmojis = (a) => emojiOutput.forEach((emoji, i) => (emoji.textContent = a[i])),
+		shuffleArray = (a) => {
+			for (let i = a.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[a[i], a[j]] = [a[j], a[i]];
+			}
 
-      return a;
-    },
-    init = () => {
-      if (winner) {
-        emojis.push("💎");
-        message = "Congratulations!";
-      } else {
-        emojis.push("⌚");
-        message = "Congratulations..";
-      }
+			return a;
+		},
+		init = () => {
+			if (winner) {
+				emojis.push("💎");
+				message = "Congratulations!";
+			} else {
+				emojis.push("⌚");
+				message = "Congratulations..";
+			}
 
-      outputEmojis(shuffleArray(emojis));
-    },
-    rainMoney = () => {
-      const w = window.innerWidth;
+			outputEmojis(shuffleArray(emojis));
+		},
+		rainMoney = () => {
+			const w = window.innerWidth;
 
-      //Create dollar bills
-      for (i = 0; i < 70; i++) {
-        const dollar = document.createElement("div");
+			//Create dollar bills
+			for (i = 0; i < 70; i++) {
+				const dollar = document.createElement("div");
 
-        dollar.classList.add("dollar-bill");
-        dollar.textContent = "💵";
-        dollar.style.left = `${Math.floor(Math.random() * w)}px`;
+				dollar.classList.add("dollar-bill");
+				dollar.textContent = "💵";
+				dollar.style.left = `${Math.floor(Math.random() * w)}px`;
 
-        document.body.appendChild(dollar);
-      }
-    };
+				document.body.appendChild(dollar);
+			}
+		};
 
-  let emojis = ["💎", "💎", "🏀", "💎", "👑", "💎", "💎", "💎"],
-    winningEmojisFound = 0,
-    emojisRemaining = 9,
-    message = "";
+	let emojis = ["💎", "💎", "🏀", "💎", "👑", "💎", "💎", "💎"],
+		winningEmojisFound = 0,
+		emojisRemaining = 9,
+		message = "";
 
-  emojiContainer.addEventListener("click", (e) => {
-    const target = e.target;
+	emojiContainer.addEventListener("click", (e) => {
+		const target = e.target;
 
-    if (target.classList.contains("emoji-btn") && !target.classList.contains("uncovered")) {
-      emojisRemaining--;
+		if (target.classList.contains("emoji-btn") && !target.classList.contains("uncovered")) {
+			emojisRemaining--;
 
-      target.classList.add("uncovered");
+			target.classList.add("uncovered");
 
-      //Check if winning emoji found
-      if (target.textContent === "💎") {
-        target.classList.add("winning-emoji");
+			//Check if winning emoji found
+			if (target.textContent === "💎") {
+				target.classList.add("winning-emoji");
 
-        //Play winning emoji found sound effect
-        switch (winningEmojisFound) {
-          case 0:
-            bellSound1.play();
-            break;
-          case 1:
-            bellSound2.play();
-            break;
-          case 2:
-            bellSound3.play();
-            break;
-        }
+				//Play winning emoji found sound effect
+				switch (winningEmojisFound) {
+					case 0:
+						bellSound1.play();
+						break;
+					case 1:
+						bellSound2.play();
+						break;
+					case 2:
+						bellSound3.play();
+						break;
+					case 3:
+						bellSound1.play();
+						break;
+					case 4:
+						bellSound2.play();
+						break;
+					case 5:
+						bellSound3.play();
+					case 6:
+						bellSound1.play();
+				}
 
-        winningEmojisFound++;
-      }
+				winningEmojisFound++;
+			}
 
-      //Check if all emojis revealed
-      if (emojisRemaining === 0) {
-        //Play sound effect
-        setTimeout(() => {
-          if (winner) {
-            winSound.play();
-            setTimeout(() => rainMoney(), 1200);
-          } else {
-            loseSound.play();
-            setTimeout(() => rainMoney(), 1200);
-          }
-        }, 1500);
+			//Check if all emojis revealed
+			if (emojisRemaining === 0) {
+				//Play sound effect
+				setTimeout(() => {
+					if (winner) {
+						winSound.play();
+						setTimeout(() => rainMoney(), 1200);
+					} else {
+						loseSound.play();
+						setTimeout(() => rainMoney(), 1200);
+					}
+				}, 1500);
 
-        //Show dialog box
-        dialogBox.classList.add("show-dialog");
-        dialogMessage.textContent = message;
-      }
-    }
-  });
+				//Show dialog box
+				dialogBox.classList.add("show-dialog");
+				dialogMessage.textContent = message;
+			}
+		}
+	});
 
-  //Initialize game
-  init();
+	//Initialize game
+	init();
 });
