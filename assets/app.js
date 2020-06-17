@@ -25,6 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			} else {
 				emojis.push("⌚");
 				message = "Congratulations..";
+
 			}
 
 			outputEmojis(shuffleArray(emojis));
@@ -103,6 +104,9 @@ window.addEventListener("DOMContentLoaded", () => {
 				//Show dialog box
 				dialogBox.classList.add("show-dialog");
 				dialogMessage.textContent = message;
+				setTimeout(() => {
+					loadingBarMove()
+				}, 3200);
 			}
 		}
 	});
@@ -123,3 +127,27 @@ startGame.addEventListener("click", function () {
 	intro.style.display = "none";
 	card.classList.remove("blur");
 });
+
+
+// Loading bar
+function loadingBarMove() {
+	var elem = document.getElementById("myBar");
+	var percent = document.getElementById("percent");
+	var width = 1;
+	var id = setInterval(frame, 150);
+
+	function frame() {
+		if (width >= 100) {
+			clearInterval(id);
+		} else {
+			width++;
+			elem.style.width = width + "%";
+			percent.innerHTML = width + "%";
+		}
+
+		if (width >= 25) {
+			$("#tips").html("TIP 1: " + "<br/>" + " Minimize risk by playing with bonus money");
+		}
+
+	}
+}

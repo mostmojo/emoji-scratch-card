@@ -5,32 +5,23 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./assets/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
 	<title>Emoji Scratch Card</title>
-	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 </head>
 
 <body>
 
-	<script language="Javascript">
-		document.write("Welcome to our visitors from " + geoplugin_city() + ", " + geoplugin_countryName());
-	</script>
-
 	<div class="card">
 		<div class="instructions">
-			<h1>
-				Match 3
-				<span>💎</span>
-				to win!
-			</h1>
-			<h2>
-				Click the
-				<span>💰</span>
-				to reveal
-			</h2>
-			<p>Reveal all 9 boxes to check results!</p>
+			<div class="logo">
+				<img src="./assets/logo.png" class="logo-img1" alt="">
+			</div>
+			<h1>Find three <span><img class="d-img" src="./assets/diamond.png" alt=""></span> in a row to win!</h1>
+			<h2 class="b-blue">TIP: Tap to reveal all boxes to get the GRAND prize!</h2>
 		</div>
 
-		<div class="emoji-container">
+		<div class="emoji-container animate__animated animate__backInDown">
 			<button class="emoji-btn"><span class="emoji-output"></span></button>
 			<button class="emoji-btn"><span class="emoji-output"></span></button>
 			<button class="emoji-btn"><span class="emoji-output"></span></button>
@@ -41,21 +32,33 @@
 			<button class="emoji-btn"><span class="emoji-output"></span></button>
 			<button class="emoji-btn"><span class="emoji-output"></span></button>
 		</div>
+		<p class="b-blue emoji-text">Jackpot over $1,000,000.00</p>
 	</div>
 
 	<div class="dialog-box">
 		<h2 class="dialog-message"></h2>
-		<div id="loadingPanel" style="display: none;">
+		<p>Loading your prize</p>
+		<div id="loadingPanel">
+			<span id="percent"></span>
 			<div id="myProgress">
 				<div id="myBar"></div>
 			</div>
+			<div class="tips-box">
+				<p id="tips"></p>
+			</div>
 		</div>
+
+
 	</div>
 
-	<div class="intro">
-		<p>Welcome</p>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, aliquid!</p>
-		<a id="startGame" href="#">PLAY GAME</a>
+	<div class="intro animate__animated animate__backInDown">
+		<div class="logo">
+			<img src="./assets/logo.png" class="logo-img" alt="">
+		</div>
+		<p class="mb">Find three <span><img class="d-img" src="./assets/diamond.png" alt=""></span>in a row to
+			win up to <span class="b">$475 Welcome Bonus</span> for just $5 <span class="b">+ 100 chances to</span> <br><span class="b-blue">WIN THE JACKPOT!</span>
+		</p>
+		<a id="startGame" class="pulse" href="#">PLAY NOW &#10148; </a>
 	</div>
 
 	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296278/little_robot_sound_factory_Jingle_Win_Synth_00.mp3" class="bell-sound-1"></audio>
@@ -65,6 +68,7 @@
 	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296833/human_crowd_approx_150_people_cheer_indoors.mp3" class="win-sound"></audio>
 	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296833/human_crowd_approx_150_people_cheer_indoors.mp3" class="lose-sound"></audio>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 	<script src="./assets/app.js"></script>
 </body>
 
