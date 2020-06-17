@@ -110,3 +110,16 @@ window.addEventListener("DOMContentLoaded", () => {
 	//Initialize game
 	init();
 });
+
+const startGame = document.getElementById("startGame");
+const card = document.querySelector(".card");
+const intro = document.querySelector(".intro");
+
+window.onload = function () {
+	card.classList.add("blur")
+};
+
+startGame.addEventListener("click", function () {
+	intro.style.display = "none";
+	card.classList.remove("blur");
+});
