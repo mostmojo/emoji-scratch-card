@@ -21,10 +21,10 @@ window.addEventListener("DOMContentLoaded", () => {
 		init = () => {
 			if (winner) {
 				emojis.push("💎");
-				message = "Congratulations!";
+				message = "CONGRATULATIONS!!";
 			} else {
 				emojis.push("⌚");
-				message = "Congratulations..";
+				message = "CONGRATULATIONS!";
 
 			}
 
