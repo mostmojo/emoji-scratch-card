@@ -6,9 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./assets/style.css" />
 	<title>Emoji Scratch Card</title>
+	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 </head>
 
 <body>
+
+	<script language="Javascript">
+		document.write("Welcome to our visitors from " + geoplugin_city() + ", " + geoplugin_countryName());
+	</script>
 
 	<div class="card">
 		<div class="instructions">
@@ -40,7 +45,11 @@
 
 	<div class="dialog-box">
 		<h2 class="dialog-message"></h2>
-		<p>sjsjsjsj</p>
+		<div id="loadingPanel" style="display: none;">
+			<div id="myProgress">
+				<div id="myBar"></div>
+			</div>
+		</div>
 	</div>
 
 	<div class="intro">

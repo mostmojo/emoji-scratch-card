@@ -207,6 +207,24 @@ p {
 	filter: blur(24px);
 }
 
+#myProgress {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #ddd;
+	border: 2px solid #4e4e4e;
+	border-radius: 3px;
+}
+
+#loadingPanel {
+	margin-bottom: 15px;
+}
+
+#myBar {
+	width: 1%;
+	height: 20px;
+	background-image: linear-gradient(#72b01d, #4a7411, #98db39);
+}
+
 @media only screen and (max-width: 414px) {
 	.emoji-btn {
 		width: 100px;
