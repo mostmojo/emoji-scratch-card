@@ -87,7 +87,11 @@ body {
 
 .b,
 .b-blue {
-	font-weight: 700;
+	font-weight: 700 !important;
+}
+
+.h {
+	font-size: 2rem;
 }
 
 .mb {
@@ -250,7 +254,8 @@ h2 {
 
 
 
-#startGame {
+#startGame,
+#claim {
 	border: 2px solid #675000;
 	background: linear-gradient(to bottom, #675000, #FFF0B9, #675000);
 	padding: 1rem 2.5rem;
@@ -259,6 +264,11 @@ h2 {
 	font-weight: 700;
 	display: inline-block;
 	font-size: 1.2rem;
+}
+
+#startGame:hover,
+#claim:hover {
+	background: linear-gradient(to bottom, #604c02, #e0d099, #604c02);
 }
 
 #myProgress {

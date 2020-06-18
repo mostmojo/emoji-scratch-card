@@ -105,10 +105,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				//Show dialog box
 				dialogBox.classList.add("show-dialog");
+				setTimeout(() => {
+					card.style.display = "none";
+				}, 200);
 				dialogMessage.textContent = message;
 				setTimeout(() => {
 					loadingBarMove()
-				}, 3200);
+				}, 1500);
 			}
 		}
 	});
@@ -123,7 +126,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		function frame() {
 			if (width >= 100) {
 				clearInterval(id);
-				card.style.display = "none";
 				dialogBox.classList.remove("show-dialog");
 				final.classList.add("show-dialog");
 			} else {
