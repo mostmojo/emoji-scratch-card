@@ -146,7 +146,13 @@ function loadingBarMove() {
 		}
 
 		if (width >= 25) {
-			$("#tips").html("TIP 1: " + "<br/>" + " Minimize risk by playing with bonus money");
+			$("#tips").html('<strong style="color: #00D1FF";>TIP 1:</strong> Minimize risk by playing with bonus money.');
+		}
+		if (width >= 40) {
+			$("#tips").html('<strong style="color: #00D1FF";>TIP 2:</strong> Progressive jackpot slots payout the most!');
+		}
+		if (width >= 55) {
+			$("#tips").html('<strong style="color: #00D1FF";>TIP 3:</strong> Cash out your winnings & enjoy it today!');
 		}
 
 	}
