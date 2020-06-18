@@ -1,7 +1,9 @@
 window.addEventListener("DOMContentLoaded", () => {
 	const emojiContainer = document.querySelector(".emoji-container"),
+		card = document.querySelector(".card"),
 		emojiOutput = document.querySelectorAll(".emoji-output"),
 		dialogBox = document.querySelector(".dialog-box"),
+		final = document.querySelector(".final"),
 		dialogMessage = document.querySelector(".dialog-message"),
 		bellSound1 = document.querySelector(".bell-sound-1"),
 		bellSound2 = document.querySelector(".bell-sound-2"),
@@ -111,9 +113,42 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
+	// Loading bar
+	function loadingBarMove() {
+		var elem = document.getElementById("myBar");
+		var percent = document.getElementById("percent");
+		var width = 1;
+		var id = setInterval(frame, 90);
+
+		function frame() {
+			if (width >= 100) {
+				clearInterval(id);
+				card.style.display = "none";
+				dialogBox.classList.remove("show-dialog");
+				final.classList.add("show-dialog");
+			} else {
+				width++;
+				elem.style.width = width + "%";
+				percent.innerHTML = width + "%";
+			}
+
+			if (width >= 25) {
+				$("#tips").html('<strong style="color: #00D1FF";>TIP 1:</strong> Minimize risk by playing with bonus money.');
+			}
+			if (width >= 40) {
+				$("#tips").html('<strong style="color: #00D1FF";>TIP 2:</strong> Progressive jackpot slots payout the most!');
+			}
+			if (width >= 55) {
+				$("#tips").html('<strong style="color: #00D1FF";>TIP 3:</strong> Cash out your winnings & enjoy it today!');
+			}
+		}
+	}
+
 	//Initialize game
 	init();
 });
+
+// Intro screen popup
 
 const startGame = document.getElementById("startGame");
 const card = document.querySelector(".card");
@@ -129,31 +164,19 @@ startGame.addEventListener("click", function () {
 });
 
 
-// Loading bar
-function loadingBarMove() {
-	var elem = document.getElementById("myBar");
-	var percent = document.getElementById("percent");
-	var width = 1;
-	var id = setInterval(frame, 150);
 
-	function frame() {
-		if (width >= 100) {
-			clearInterval(id);
-		} else {
-			width++;
-			elem.style.width = width + "%";
-			percent.innerHTML = width + "%";
-		}
 
-		if (width >= 25) {
-			$("#tips").html('<strong style="color: #00D1FF";>TIP 1:</strong> Minimize risk by playing with bonus money.');
-		}
-		if (width >= 40) {
-			$("#tips").html('<strong style="color: #00D1FF";>TIP 2:</strong> Progressive jackpot slots payout the most!');
-		}
-		if (width >= 55) {
-			$("#tips").html('<strong style="color: #00D1FF";>TIP 3:</strong> Cash out your winnings & enjoy it today!');
-		}
+// Random number generator for popup
 
-	}
+function random_item(items) {
+	return items[Math.floor(Math.random() * items.length)];
 }
+
+var items = [
+	"45",
+	"46",
+	"47",
+	"48",
+	"49",
+];
+document.getElementById("no").innerText = random_item(items);

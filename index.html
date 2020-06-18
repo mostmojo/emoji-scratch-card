@@ -12,7 +12,22 @@
 
 <body>
 
-	<div class="card">
+	<!-- Intro  -->
+	<div class="intro animate__animated animate__backInDown">
+		<div class="logo">
+			<img src="./assets/logo.png" class="logo-img" alt="game-logo">
+		</div>
+		<p class="mb">Find three <span><img class="d-img" src="./assets/diamond.png" alt=""></span>in a row to
+			win up to <span class="b">$475 Welcome Bonus</span> for just $5 <span class="b">+ 100 chances to</span> <br><span class="b-blue">WIN THE JACKPOT!</span>
+		</p>
+		<a id="startGame" class="pulse" href="#">PLAY NOW &#10148; </a>
+	</div>
+
+	<!-- Game -->
+	<div class="card" style="display: block;">
+		<div class="cc">
+			<img src="./assets/captain-cooks.png" alt="company-logo">
+		</div>
 		<div class="instructions">
 			<div class="logo">
 				<img src="./assets/logo.png" class="logo-img1" alt="">
@@ -35,9 +50,13 @@
 		<p class="b-blue emoji-text">Jackpot over $1,000,000.00</p>
 	</div>
 
+	<!-- Loading screen with tips -->
 	<div class="dialog-box">
+		<div class="logo">
+			<img src="./assets/logo.png" class="logo-img" alt="">
+		</div>
 		<h2 class="dialog-message"></h2>
-		<p>Loading your prize</p>
+		<p class="dialog-load">Loading your prize</p>
 		<div id="loadingPanel">
 			<span id="percent"></span>
 			<div id="myProgress">
@@ -47,16 +66,22 @@
 				<p id="tips"></p>
 			</div>
 		</div>
+		<div class="safe-badge">
+			<img src="./assets/safe-secure.png" alt="safety-badge">
+		</div>
 	</div>
 
-	<div class="intro animate__animated animate__backInDown">
+	<!-- Final screen  -->
+	<div class="final">
 		<div class="logo">
 			<img src="./assets/logo.png" class="logo-img" alt="">
 		</div>
-		<p class="mb">Find three <span><img class="d-img" src="./assets/diamond.png" alt=""></span>in a row to
-			win up to <span class="b">$475 Welcome Bonus</span> for just $5 <span class="b">+ 100 chances to</span> <br><span class="b-blue">WIN THE JACKPOT!</span>
-		</p>
-		<a id="startGame" class="pulse" href="#">PLAY NOW &#10148; </a>
+		<h2 class="dialog-message">Congratulations!</h2>
+		<div class="final-text">
+			<p>You are winner number<br>
+				<span id="no" class="b"></span> <span class="b">out of 50 today!</span>
+				Stay lucky!</p>
+		</div>
 	</div>
 
 	<audio src="https://res.cloudinary.com/mostmojo/video/upload/v1592296278/little_robot_sound_factory_Jingle_Win_Synth_00.mp3" class="bell-sound-1"></audio>
