@@ -157,10 +157,10 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: -500px;
+	top: -400px;
 	left: 50%;
 	font-weight: 600;
-	border-radius: 25px;
+	border-radius: 12px;
 	background-image: linear-gradient(to bottom right, #000, #595858, #000, #000);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	transform: translate(-50%, -50%);
