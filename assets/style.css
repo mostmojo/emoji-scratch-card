@@ -70,7 +70,7 @@ body {
 
 .logo-img {
 	max-width: 300px;
-	height: 100%;
+	height: auto;
 }
 
 .logo-img1 {
@@ -96,6 +96,14 @@ body {
 
 .mb {
 	margin-bottom: 2rem;
+}
+
+.mb-xl {
+	margin-bottom: 4rem
+}
+
+.mt {
+	margin-top: 2rem;
 }
 
 .b-blue {
@@ -257,7 +265,7 @@ h2 {
 #startGame,
 #claim {
 	border: 2px solid #675000;
-	background: linear-gradient(to bottom, #675000, #FFF0B9, #675000);
+	background-image: linear-gradient(to bottom, #675000, #FFF0B9, #675000);
 	padding: 1rem 2.5rem;
 	text-decoration: none;
 	color: #000;
@@ -266,10 +274,19 @@ h2 {
 	font-size: 1.2rem;
 }
 
-#startGame:hover,
-#claim:hover {
-	background: linear-gradient(to bottom, #604c02, #e0d099, #604c02);
+#startGame:hover {
+	background-image: linear-gradient(to bottom, #604c02, #e0d099, #604c02);
 }
+
+#claim {
+	background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+	border: 2px solid #84fab0;
+}
+
+#claim:hover {
+	background-image: linear-gradient(to right, #73e79d 0%, #7bbada 51%, #73e79d 100%);
+}
+
 
 #myProgress {
 	width: 300px;
