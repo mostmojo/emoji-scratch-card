@@ -39,14 +39,14 @@ body {
 
 .cc {
 	position: absolute;
-	top: 4px;
+	top: 8px;
 	left: 50%;
 	margin-left: -100px;
 	display: block;
 }
 
 .cc img {
-	max-width: 180px;
+	max-width: 160px;
 }
 
 .emoji-container {
@@ -287,7 +287,7 @@ h2 {
 .dollar-bill {
 	position: absolute;
 	bottom: 100%;
-	font-size: 50px;
+	font-size: 35px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -556,6 +556,10 @@ h2 {
 
 	.logo-img {
 		max-width: 200px;
+	}
+
+	.cc {
+		margin-left: -85px;
 	}
 
 }

@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
 				dialogBox.classList.add("show-dialog");
 				setTimeout(() => {
 					card.style.display = "none";
-				}, 200);
+				}, 1200);
 				dialogMessage.textContent = message;
 				setTimeout(() => {
 					loadingBarMove()
@@ -137,10 +137,10 @@ window.addEventListener("DOMContentLoaded", () => {
 			if (width >= 25) {
 				$("#tips").html('<strong style="color: #00D1FF";>TIP 1:</strong> Minimize risk by playing with bonus money.');
 			}
-			if (width >= 40) {
+			if (width >= 50) {
 				$("#tips").html('<strong style="color: #00D1FF";>TIP 2:</strong> Progressive jackpot slots payout the most!');
 			}
-			if (width >= 55) {
+			if (width >= 75) {
 				$("#tips").html('<strong style="color: #00D1FF";>TIP 3:</strong> Cash out your winnings & enjoy it today!');
 			}
 		}
